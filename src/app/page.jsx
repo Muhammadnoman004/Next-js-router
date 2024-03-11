@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react'
+import './Counter.css'
 
 export default function HomePage() {
   let [Count, setCount] = useState(0)
@@ -16,11 +17,11 @@ export default function HomePage() {
   }
 
   return (
-    <div style={{ textAlign: "center" }}>
-      <h1 >...Counter...</h1>
-      <h1>{Count}</h1>
-      <button onClick={increment}>Increment</button>
-      <button onClick={decrement}>Decerment</button>
+    <div>
+      <h1 id='heading'>...Counter...</h1>
+      <h1 id='Count'>{Count}</h1>
+      <button id='incBtn' onClick={increment}>Increment</button>
+      <button id='decBtn' onClick={decrement}>Decrement</button>
     </div>
   )
 }
